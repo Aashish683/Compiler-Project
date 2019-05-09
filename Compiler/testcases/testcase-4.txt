@@ -1,0 +1,9 @@
+_main
+	type real :b3 : global;
+	type real :c4bd56 : global;
+	type real :c4bd23;
+	b3 <--- 7;
+	[c4bd56]<--- call _sumN with parameters [b3];
+	write(c4bd56);
+	return;
+end

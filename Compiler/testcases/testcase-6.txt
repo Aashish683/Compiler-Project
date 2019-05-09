@@ -1,0 +1,31 @@
+%Test Case 3
+%Following program computes an arithmetic expression 
+
+% The following function computes the function value for the given inputs 
+_computeFunctionValue input parameter list[int c3, int c4, int c5]
+output parameter list [real c6];
+	type real : d4cbcd5677;
+	type real : c4bbb;
+	c6 <--- 5000.79;
+	d4cbcd5677<--- ((c3 + 2*c4)-(c5-5))/ 4;
+	c4bbb <--- ((d4cbcd5677- 2.35)*(2345-234*8))+5*c3;
+	if((~(c4bbb == 0)) &&& (c4bbb > 78.56)) 
+	then
+		c6<--- d4cbcd5677/c4bbb;
+	else
+		write(c4bbb);
+	endif
+
+	return [c6];
+end
+
+
+_main
+	type real :b3 : global;
+	type real :c4bd56;
+	type real :c4bd23;
+	b3 <--- 7;
+	[c4bd56]<--- call _sumN with parameters [b3];
+	write(c4bd56);
+	return;
+end

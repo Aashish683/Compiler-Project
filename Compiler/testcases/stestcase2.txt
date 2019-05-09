@@ -1,0 +1,60 @@
+
+%Test Case 2
+%Following program computes the average marks obtained by students in three subjects
+
+%Following function reads marks of a student in all subjects and returns as a record variable
+% Note that the variable b7 is not used anywhere but it is the syntactic requirement to have
+% atleast one input parameter
+
+_addRecords input parameter list[int b2, record #marks c3b5, record #marks c3b6]
+output parameter list [ record #marks b3c45];
+	[c3b5] <--- call _readMarks with parameters [b2];
+	[c3b6]<--- call _readMarks with parameters [b2];
+	b3c45 <--- c3b5 + c3b6;
+	return [b3c45];
+end
+
+_readMarks input parameter list[int b7]
+output parameter list [ record #marks b3c2];
+	read(b3c2.maths);
+	read(b3c2.physics);
+	read(b3c2.chemistry);
+	return [b3c2];
+end
+
+
+%The following program computes the average of marks of total d5cb34567  students
+_main
+	record #marks
+		type real : maths;
+		type real: physics;
+		type real: chemistry;
+	endrecord;
+	% each field above represents the marks obtained in corresponding subject
+
+	type record #marks : d4;
+	% The variable d4 stores the marks of one student
+
+	type int : b5;
+	type int : d5cb34567;
+	type real : b5;
+	type record #marks : b5c6;
+	%The identifier b5c6 stores the sum of marks
+
+	b5 <--- 1;
+	read(d5cb34567);
+	b5c6.maths <--- 0.00;
+	b5c6.physics <--- 0.00;
+	b5c6.chemistry <---0.00;
+	while(b5<=d5cb34567)
+		[d4] <--- call _readMarks with parameters [b5];
+		[b5c6] <--- call _addRecords with parameters [b5c6];
+		% above displays the sum of records
+		b5 <--- b5 +1;
+	endwhile
+	d4 <--- b5c6 / d5cb34567;
+	write(d4.maths);
+	write(d4.physics);
+	write(d4.chemistry);
+	return;
+end

@@ -1,0 +1,10 @@
+_main
+	type int :b3;
+	type int : b2;
+	type int : c2;
+	type int : d2;
+	read(b2);
+
+	write(b2);
+	return;
+end

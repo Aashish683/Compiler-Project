@@ -1,0 +1,41 @@
+
+% The program is syntactically incorrect, errors described in comments.
+
+
+_recordDemo1 input parameter list [record #book d5cc34, record #book d2cd]
+output parameter list[record #book d3];
+    record #new
+        type int : value;
+        type real : cost;
+    endrecord;
+
+    d3 <--- d5cc34 + d2caaaaaaaaaaaaaaaaaaad;
+    return [d3];
+end
+
+_main
+
+    record #book
+        type int : edition;
+        type real : price;
+    endrecord;
+
+    % ERROR => LINE 23,25,26 are expected to close with semi-colons
+    type record #book: b2
+    type record #book: c2
+    type record #book: d2
+    type record #new: b7bc34;
+    b2.edition <--- 3;
+    % ERROR => 24.9 is not tokenizable
+    b2.price <--- 24.9;
+    c2.edition <--- 2;
+    % ERROR => 98.808 is tokenized by the lexer as 98.80 as TK_RNUM and 8 as TK_NUM, but TK_SEM was expected and not TK_NUM
+    c2 <--- 98.808;
+    % COMMENT LINE
+    d2 <--- b2 + c2;
+    % COMMENT
+    % COMMENT
+    [d2] <--- call _function1 with parameters[b2,c2];
+    write(d2);
+    return;
+end

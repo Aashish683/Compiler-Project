@@ -1,0 +1,28 @@
+_readMarks input parameter list[int b7]
+output parameter list [ record #m b3c45];
+    record #new
+        type int : value;
+        type real : cost;
+    endrecord;
+
+	read(b3c45.maths);
+	read(b3c45.physics);
+	read(b3c45.chemistry);
+	return [b3c45];
+end
+
+_main
+
+    record #ney
+        type int : value;
+        type real : cost;
+    endrecord;
+
+	type int :b3 : global;
+	type real :c4bd56;
+	type real :c4bd23;
+	b3 <--- 7;
+	[c4bd56]<--- call _sumN with parameters [b3];
+	write(c4bd56);
+	return;
+end

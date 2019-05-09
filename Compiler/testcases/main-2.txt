@@ -1,0 +1,26 @@
+_main
+
+	record #marks
+		type int : maths;
+		type int: physics;
+		type int: chemistry;
+	endrecord;
+
+	type int :b3;
+	type int : b2;
+	type int : c2;
+	type int : d2;
+    type int : b2c;
+    type record #marks : b3c2;
+
+    b2 <--- 1;
+
+    while(b2 >= 0)
+        read(b2);
+        read(c2);
+        c2 <--- b2 + c2;
+        write(c2);
+    endwhile
+
+    return;
+end

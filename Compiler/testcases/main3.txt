@@ -1,0 +1,19 @@
+	
+_main
+	type int : b5b567;
+	type int : c3bd;
+	type int : d3;
+	b5b567 <--- 1;
+	d3 <--- 0;
+	while ( b5b567 <= 7)
+		read( c3bd);
+		d3 <--- d3 + c3bd;
+		b5b567 <--- b5b567 + 1;
+	endwhile
+	write(d3);
+	return;
+end
+
+
+
+

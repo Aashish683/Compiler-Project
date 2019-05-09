@@ -1,0 +1,3 @@
+Variables and functions names are in camel case with starting letter to be small => dotMark
+Structs, Unions, enums are in camel case with starting letter being in capitals => TokenName
+Field names are in caps and separated by '_' (except generic ones like next, children, parent etc)

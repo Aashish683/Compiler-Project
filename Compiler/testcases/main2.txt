@@ -1,0 +1,19 @@
+_main
+	type int :b3c45;
+	type int : b2d6;
+	type int : d6:global;
+	read(b3c45);
+	read(b2d6);
+	d6<--- 100;
+	if(b3c45 <= b2d6)
+	then
+		d6<---d6+100;
+	else
+		d6<---d6-200;
+	endif
+	write(d6);
+	return;
+end
+
+
+

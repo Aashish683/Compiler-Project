@@ -1,0 +1,24 @@
+_main
+	type int :b3;
+	type int : b2;
+	type int : c2;
+	type int : d2;
+    type int : b2c;
+    read(b2);
+    read(d2);
+
+    if(d2 > b2)
+    then
+        if(d2 > 5)
+        then
+            write(d2);
+        else
+            write(5);
+        endif
+
+    else
+        write(b2);
+    endif
+
+	return;
+end

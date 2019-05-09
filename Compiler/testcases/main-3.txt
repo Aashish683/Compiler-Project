@@ -1,0 +1,22 @@
+_main
+
+	record #marks
+		type int : maths;
+		type int: physics;
+		type int: chemistry;
+	endrecord;
+
+    type record #marks : b3c2;
+
+    read(b3c2.maths);
+    read(b3c2.chemistry);
+
+    b3c2.physics <--- b3c2.maths + b3c2.chemistry;
+
+
+    write(b3c2.maths);
+    write(b3c2.physics);
+    write(b3c2.chemistry);
+
+    return;
+end

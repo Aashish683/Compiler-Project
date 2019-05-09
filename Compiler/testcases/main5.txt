@@ -1,0 +1,27 @@
+_main
+	record #marks
+		type int : maths; 
+		type int: physics; 
+		type int: chemistry;
+	endrecord;
+
+	type record #marks: d4;
+	type record #marks: d5;
+	type record #marks: d6;
+		
+	read(d4.maths);
+	read(d4.physics);
+	read(d4.chemistry);
+
+	read(d5.maths);
+	read(d5.physics);
+	read(d5.chemistry);
+
+	d6 <--- d4 + d5;
+	
+	write(d6.maths);
+	write(d6.physics);
+	write(d6.chemistry);
+
+	return;
+end
