@@ -17,7 +17,8 @@ To run it on Windows, you will have to use [cygwin](https://www.cygwin.com/).
 2.  Run `./compiler <RELATIVE_PATH_TO_TESTCASE_FILE> <NAME_OF_ASM_FILE>`
 3.  Choose among the 11 options to test the feature you want.
 4.  To create assembly-level code , choose option 10.
-5.  To run the asm file `nasm -felf64 code.asm && gcc code.o && ./a.out` (Using code.asm as the name of the asm file in this example)
+5.  Choose option 0 to exit. (Cntrl + C would result with no output in the ASM file)
+6.  To run the asm file `nasm -felf64 code.asm && gcc code.o && ./a.out` (Using code.asm as the name of the asm file in this example)
 
 ### Stages of compiling a testcase (Option 10)
                                               
